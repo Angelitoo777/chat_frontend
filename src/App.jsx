@@ -3,9 +3,6 @@ import io from 'socket.io-client';
 import Login from './components/Login';
 import ChatContainer from './components/ChatContainer';
 import MessageInput from './components/MessageInput';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const url = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
