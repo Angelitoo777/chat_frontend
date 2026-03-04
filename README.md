@@ -104,7 +104,7 @@ cp .env.example .env                    # si existe
 npm run dev
 ```
 
-> La aplicación necesita un servidor Socket.IO corriendo (por ejemplo el backend `chat-server`) escuchando en la URL configurada.
+> La aplicación necesita un servidor Socket.IO corriendo (por ejemplo el backend `chat-backend`) escuchando en la URL configurada.
 
 ---
 
@@ -127,19 +127,9 @@ npm run dev
 
 ---
 
-## 🧩 Puntos de Extensión
-
-- **Soporte de salas**: agregar selección de canal/room.
-- **Persistencia**: enviar mensajes a base de datos via API.
-- **Notificaciones de sistema**: alertas cuando usuarios se conectan/desconectan.
-- **Emoji / multimedia**: permitir emojis, imágenes o archivos.
-
----
-
 ## 👨‍💻 Autor
 
 **Angel Oropeza**  
-**Rol:** Frontend Developer  
 **Stack:** React, Vite, Tailwind, Socket.IO  
 **Proyecto:** Chat en tiempo real con interfaz ligera 🚀
 
