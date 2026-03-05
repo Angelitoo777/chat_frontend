@@ -34,7 +34,7 @@ function App() {
           </h2>
           <div className="flex items-center gap-4">
             <div className="text-right">
-              <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Dev</p>
+              <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Usuario</p>
               <p className="text-sm font-medium text-blue-400">{username}</p>
             </div>
             <button onClick={onLogout} className="text-[10px] bg-red-500/10 text-red-500 border border-red-500/20 px-3 py-1.5 rounded-md hover:bg-red-500 hover:text-white transition-all duration-300 font-bold uppercase">

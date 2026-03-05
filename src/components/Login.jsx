@@ -11,7 +11,7 @@ export default function Login({ onLogin }) {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-950 text-white">
       <div className="bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-xl w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-center mb-6 text-blue-500">Global Chat</h1>
+        <h1 className="text-2xl font-bold text-center mb-6 text-blue-500">Chat Global</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input 
             type="text"
