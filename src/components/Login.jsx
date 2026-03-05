@@ -15,7 +15,7 @@ export default function Login({ onLogin }) {
         <form onSubmit={handleSubmit} className="space-y-4">
           <input 
             type="text"
-            placeholder="Tu nombre de usuario..."
+            placeholder="Ingresa tu nombre de usuario..."
             className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg outline-none focus:border-blue-500 transition-all"
             value={name}
             onChange={(e) => setName(e.target.value)}

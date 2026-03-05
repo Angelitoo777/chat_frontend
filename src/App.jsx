@@ -72,7 +72,7 @@ function App() {
         <header className="p-4 border-b border-gray-800 flex justify-between items-center bg-[#111111]/80 backdrop-blur-md sticky top-0 z-10">
           <div>
             <h2 className="font-black text-blue-500 text-xl tracking-tighter uppercase">
-              Global Chat <span className="text-gray-600 font-light text-sm normal-case">v1.0</span>
+              Chat Global <span className="text-gray-600 font-light text-sm normal-case">v1.0</span>
             </h2>
           </div>
           <div className="flex items-center gap-4">
