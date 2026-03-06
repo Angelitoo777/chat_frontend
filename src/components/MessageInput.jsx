@@ -6,7 +6,7 @@ export default function MessageInput({ onSendMessage, onTyping }) {
   useEffect(() => {
     if (text.length > 0) {
       onTyping(true);
-      const timeout = setTimeout(() => onTyping(false), 2000);
+      const timeout = setTimeout(() => onTyping(false), 1500);
       return () => clearTimeout(timeout);
     } else {
       onTyping(false);

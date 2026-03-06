@@ -16,15 +16,18 @@ La interfaz se conecta a un servidor Socket.IO, permite autenticación simple po
 │   ├── index.css              # Estilos globales
 │   ├── App.css                # Estilos de la aplicación
 │   ├── assets/                # Imágenes o recursos estáticos
-│   └── components/            # Componentes funcionales
-│       ├── Login.jsx          # Formulario de inicio de sesión por usuario
-│       ├── ChatContainer.jsx  # Lista de mensajes y scroll automático
-│       └── MessageInput.jsx   # Campo de texto con manejo de "typing"
+│   ├── components/            # Componentes funcionales
+│   │   ├── Login.jsx          # Formulario de inicio de sesión por usuario
+│   │   ├── ChatContainer.jsx  # Lista de mensajes y scroll automático
+│   │   └── MessageInput.jsx   # Campo de texto con manejo de "typing"
+│   └── hooks/                 # Hooks personalizados
+│       └── useChatSocket.js   # Hook para manejar la conexión Socket.IO
 ├── package.json               # Dependencias y scripts
 ├── vite.config.js             # Configuración de Vite (alias, env)
 ├── tailwind.config.js         # Configuración de TailwindCSS
 ├── postcss.config.js          # PostCSS para Tailwind
 ├── eslint.config.js           # Reglas de linting
+├── vercel.json                # Configuración para despliegue en Vercel
 └── README.md                  # Documentación del proyecto
 ```
 
@@ -37,7 +40,7 @@ La interfaz se conecta a un servidor Socket.IO, permite autenticación simple po
 | **Framework** | React (v18) + Vite            |
 | **Estilos** | Tailwind CSS                 |
 | **Tiempo real** | Socket.IO-client              |
-| **Gestión de estado** | React Hooks (useState/useEffect) |
+| **Gestión de estado** | React Hooks (useState/useEffect) + Custom Hook (useChatSocket) |
 | **Variables de entorno** | Vite (`import.meta.env`) + dotenv |
 | **Linting** | ESLint con configuración personalizada |
 
@@ -108,22 +111,28 @@ npm run dev
 
 ---
 
-## 📋 Scripts Útiles
+## � Despliegue
 
-- `npm run dev` – inicia el servidor de desarrollo de Vite.
-- `npm run build` – construye la versión de producción en `dist/`.
-- `npm run preview` – sirve la compilación de producción localmente.
-- `npm run lint` – ejecuta ESLint en los archivos fuente.
+### Vercel
+El proyecto está configurado para desplegarse fácilmente en Vercel:
 
----
+1. **Conecta tu repositorio** a Vercel desde [vercel.com](https://vercel.com).
+2. **Configura las variables de entorno** en el dashboard de Vercel:
+   - `VITE_API_URL`: URL de tu servidor Socket.IO (ej. `https://tu-servidor-socketio.com`).
+3. **Despliega** automáticamente con cada push a la rama principal.
+
+El archivo `vercel.json` asegura que las rutas de SPA funcionen correctamente redirigiendo a `index.html`.
+
+> Asegúrate de que el servidor backend esté desplegado y accesible antes de desplegar el frontend.
 
 ## 📁 Estructura de Componentes
 
-| Componente         | Propósito                              |
+| Componente/Hook    | Propósito                              |
 |--------------------|----------------------------------------|
 | `Login`            | Captura y guarda el nombre de usuario  |
 | `ChatContainer`    | Muestra los mensajes y autoscroll       |
 | `MessageInput`     | Entrada de texto y detección de typing |
+| `useChatSocket`    | Hook personalizado para conexión Socket.IO y manejo de mensajes |
 
 ---
 
